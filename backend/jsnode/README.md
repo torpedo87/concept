@@ -10,6 +10,8 @@
 - require('http')    //require 함수로 http 모듈 호출
 - [모듈 사용설명서 링크](https://nodejs.org/dist/latest-v6.x/docs/api/)
 - npm 앱스토어에서 모듈(express, underscore, jade) 다운받아서 사용
+- supervisor(변경사항을 watch하여 자동으로 node를 재부팅하는 모듈)
+- multer(파일 업로드 모듈)
 
 ---
 # npm (node package manager)
@@ -18,6 +20,7 @@
 - 설치, 삭제, 업그레이드, 의존성 관리
 - uglifyjs(불필요한 공백제거하고 코드를 간결하게 하는 앱)
 - underscore
+- fs(파일 저장, 읽기)
 
 ---
 # callback 함수
@@ -34,10 +37,45 @@
 ---
 # express
 ## nodejs로 웹서버 만들때 사용하는 웹 프레임워크
+
 ## 라우팅(웹페이지별 길 찾아주기)
 - 사용자-> 라우터(get) -> controller(send)
-## template 엔진
+
+## template 엔진(jade, handlebar)
+- express가 사용하는 모듈
+- html에서 js 동작시키는 방법
 - 정적페이지와 동적페이지의 단점들을 보완
 - 정적페이지(순수html)는 js를 못쓰니까 변경시 힘들어
-- 동적페이지는 js 내에서 html 다루기가 까다롭다(``를 사용해도 되지만 지저분함)
+- 동적페이지는 js 내에서 html 다루기가 까다롭다(\`를 사용해도 되지만 지저분함)
+
+## 쿼리스트링(home/?id=1&name=jun)
+- ? 뒤의 내용이 쿼리스트링
+- 라우팅되는 페이지가 쿼리스트링에 따라 다른 정보를 가져오도록
+- req.query.id, req.query.name 으로 url정보 가져올 수 있다
+- url의 정보 전달
+
+## 시맨틱 url(home/1)
+- 라우팅페이지 자체에 쿼리스트링을 넣어서 깔끔한 url
+- query 대신에 params(parameters) 사용
+- restful api 참고
+---
+# 사용자로부터 데이터를 전송받는 방법
+## 1. get (url을 통해 정보전달)
+- 주소 입력해서 정보를 가져오는 것
+- html의 form 태그 get방식(사용자 입력값을 쿼리스트링을 통해 전달)
+
+## 2. post (url 이외의 수단을 통한 정보전달)
+- 사용자의 정보를 서버로 전달(로그인 정보 등등)
+- url의 한계 극복(긴내용, 보안성 내용 전달시 사용)
+- html의 form 태그 post방식(url이 아닌 body를 통해 전달)
+- req.query 대신에 req.body 를 사용(이때 미들웨어 bodyparser 필요)
+---
+
+# database
+## 관계형(oracle, mysql, sql server)
+### mysql
+- 
+
+## 비관계형(nosql)
+
 ---
