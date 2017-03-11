@@ -11,3 +11,7 @@
 - 약 6만개의 서버중 어떤 서버가 요청에 응답할 것인가
 - 웹서버는 80번 포트에 연결되어 리스닝 상태에 있다가 웹브라우저가 요청하면 항구가 열린다
 - http로 접속할때 80번 포트
+
+# http(HyperText Transfer Protocol)
+- 웹브라우저와 웹서버 사이의 html 통신 규약
+- 크롬개발자도구의 네트워크 내용(request headers, response headers)
