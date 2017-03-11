@@ -72,9 +72,13 @@
 ---
 
 # database
+- 서로 연관된 table들을 묶어놓은 디렉토리
+- 웹브라우저의 요청에 의해 3306 포트와 연결된 database server에 들어가서 database의 table내용에 접근
+
+
 ## 관계형(oracle, mysql, sql server)
 ### mysql
-- 
+- node-mysql 모듈(js로 mysql 제어)
 
 ## 비관계형(nosql)
 
