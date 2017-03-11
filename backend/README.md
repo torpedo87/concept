@@ -15,3 +15,12 @@
 # http(HyperText Transfer Protocol)
 - 웹브라우저와 웹서버 사이의 html 통신 규약
 - 크롬개발자도구의 네트워크 내용(request headers, response headers)
+---
+# 쿠키
+- 로그인 된 상태 유지, 장바구니 내용 유지
+- 같은 사이트이지만 사용자마다 다른 상태
+- 보안 취약(해결책- https로 바꾸기, 쿠키값 암호화)
+
+# 세션
+
+# 인증
